@@ -20,11 +20,8 @@ apt-get update \
          tesseract-ocr-eng \
          tesseract-ocr-fra \
          tesseract-ocr-deu \
-         tesseract-ocr-spa \
          tesseract-ocr-por \
-         tesseract-ocr-ara \
-         tesseract-ocr-rus \
-         tesseract-ocr-chi-sim 
+         tesseract-ocr-ita
 
 python3 -m venv --system-site-packages /appenv
 
@@ -46,7 +43,7 @@ apt-get update \
 . /appenv/bin/activate; \
 pip install --upgrade pip \
   && easy_install watchdog
-  
+
 apt-get remove -y \
   build-essential \
   libyaml-dev \

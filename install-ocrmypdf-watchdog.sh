@@ -36,7 +36,7 @@ apt-get update \
 . /appenv/bin/activate; \
 pip install --upgrade pip \
   && easy_install watchdog
-  
+
 apt-get remove -y \
   build-essential \
   libyaml-dev \
