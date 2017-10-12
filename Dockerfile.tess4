@@ -3,6 +3,7 @@
 FROM 	ubuntu:17.04
 MAINTAINER Pedro Pombeiro <pedropombeiro@gmail.com>
 
+ENV LANG en_US.UTF-8
 ENV PUID 1000
 ENV PGID 1000
 ENV OCRMYPDF_OPTIONS "--pdf-renderer sandwich --rotate-pages --deskew --clean --skip-text"

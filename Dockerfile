@@ -2,6 +2,7 @@
 #
 FROM      ubuntu:17.04
 
+ENV LANG en_US.UTF-8
 ENV PUID 1000
 ENV PGID 1000
 ENV OCRMYPDF_OPTIONS "--rotate-pages --deskew --clean --skip-text"
