@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 SCRIPT_PATH=/home/docker/processfile.sh
 
 useradd -u ${PUID} -g ${PGID} -o -m user

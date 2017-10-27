@@ -9,8 +9,8 @@ ENV OCRMYPDF_OPTIONS "--rotate-pages --deskew --clean --skip-text"
 ENV LANG=C.UTF-8
 
 COPY install-ocrmypdf-watchdog.sh /
-RUN chmod +x /install-ocrmypdf-watchdog.sh \
-    && /install-ocrmypdf-watchdog.sh
+RUN chmod +x /install-ocrmypdf-watchdog.sh; sync \
+    && /install-ocrmypdf-watchdog.sh;
   
 # Now copy the application in, mainly to get the test suite.
 # Do this now to make the best use of Docker cache.

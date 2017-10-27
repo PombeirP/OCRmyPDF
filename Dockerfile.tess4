@@ -1,7 +1,6 @@
 # OCRmyPDF
 #
 FROM 	ubuntu:17.04
-MAINTAINER Pedro Pombeiro <pedropombeiro@gmail.com>
 
 ENV LANG en_US.UTF-8
 ENV PUID 1000
@@ -10,8 +9,8 @@ ENV OCRMYPDF_OPTIONS "--pdf-renderer sandwich --rotate-pages --deskew --clean --
 ENV LANG=C.UTF-8
 
 COPY install-ocrmypdf-tess4-watchdog.sh /
-RUN chmod +x /install-ocrmypdf-tess4-watchdog.sh \
-    && /install-ocrmypdf-tess4-watchdog.sh
+RUN chmod +x /install-ocrmypdf-tess4-watchdog.sh; sync \
+    && /install-ocrmypdf-tess4-watchdog.sh;
   
 # Now copy the application in, mainly to get the test suite.
 # Do this now to make the best use of Docker cache.
